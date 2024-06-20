@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Mcat Mate</title>
+
+    <!-- This line provides automatic page and style reloading when files change -->
+    <script type="module" src="/lib/client/updater.js"></script>
+    <script src="https://accounts.google.com/gsi/client" defer></script>
+    <link rel="stylesheet" href="css/index.css">
+    <script type="module" src="js/index.js"></script>
+  </head>
+  <body>
+    <header id="header">
+        <section class="pageLogo"> 
+          <img src="./images/mcat_mate_logo-.png" alt="logo" class="logo">
+          <h1 class="title">MCAT MATE</h1>
+        </section>
+        <section class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="useful.html">Resources</a></li>
+        </section>
+        <section id="authentication">
+        </section>
+        <button type="submit" id="logoutButton" class="profileHidden">Logout</button>
+    </header>
+
+    <main id="welcome">
+      <div class="paper">
+        <h1>Welcome to <strong class="brand">Your Personalized MCAT Study Tool</strong>!</h1>
+        <h2>Log in to view your dashboard.</h2>
+      </div>
+    </main>
+
+    <main id="main" class="hidden">
+      
+      <section id="userInfo" class="paper">
+        <div class="pfpContainer" id="pfpContainer"></div>
+        <h1 id="dashWelcome"> Welcome Back </h1>
+        <h1 id="dashTitle"> </h1>
+      </section>
+
+      <div class="widthContainer">
+        <section id="feedPanel">
+          <div id="countdownBox">
+            <section id="countdownPanel" class="paper">
+              <h1>MCAT Countdown </h1>
+              <div id="countdown"></div>
+              <input type="date" id="mcatDateInput">
+              <button id="countdownButton">Set</button>
+            </section>
+          </div>
+          <form id="postForm" class="post paper">
+            <div>
+              <div class="text">
+                <h1>Add a new task</h1>
+                <textarea id="newPost" placeholder="Add in a task"></textarea>
+                <input type="date" id="dateInput">
+                <button type="submit" id="postButton">Add Task</button>
+              </div>
+            </div>
+          </form>
+
+          <div id="templatePost" class="post paper">
+            <div>
+              <div class="postHeader">
+                <span class="time"></span>
+                <input class="check" type="checkbox">
+                <button class="delete"> Delete</button>
+              </div>
+              <div class="text"></div>
+              <div class="text profileHidden"></div>
+            </div>
+          </div>
+
+          <div id="feed"></div>
+          <section class="tasks">
+              <section class="column" id="todo">
+                <h2 class="columnTitle">To Do</h2>
+              </section>
+              <section class="column" id="complete">
+                <h2 class="columnTitle">Complete</h2>
+              </section>
+          </section>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

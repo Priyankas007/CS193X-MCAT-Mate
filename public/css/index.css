@@ -1,0 +1,278 @@
+@import "./global.css";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/***** Generic Containers ******/
+
+.widthContainer {
+  flex-grow: 1;
+  max-width: 1280px;
+}
+
+.paper {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.6rem;
+  box-shadow: 1px 1px 1px 1px lightgray;
+}
+
+/***** Header *****/
+.nav {
+  list-style-type: none;
+  display: flex;
+  color: white;
+  font-weight: bold; /* Make the font bold */
+}
+
+.nav a {
+  margin-right: 10px;
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit the text color from the parent */
+}
+
+.brand {
+  color: #1E88E5;
+  font-weight: bold;
+}
+
+#header {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  background-color: #1E88E5;
+  margin-bottom: 1.5rem;
+  height: 70px;
+  align-items: center;
+}
+
+#authentication {
+  margin-right:1em;
+}
+
+.title {
+  font-weight: 800;
+  color:white;
+  font-size: 30px;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+.pageLogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/***** Welcome *****/
+
+#welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome.hidden {
+  display: none;
+}
+
+#welcome h1 {
+  font-size: 1.8em;
+  font-weight: 300;
+}
+
+#welcome .paper {
+  text-align: center;
+  width: 50%;
+}
+
+/***** Main *****/
+
+#resources {
+  margin: 50px;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+  animation: fadein 1s;
+}
+
+#main.hidden, #templatePost {
+  display: none;
+}
+
+.profileHidden {
+  display: none;
+}
+
+#main .widthContainer {
+  display: flex;
+}
+
+#userInfo {
+  display: flex;
+  flex: 0 0 auto; /* Prevents growth */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #0e4b9b;
+  gap: 1rem;
+  margin-right: 1rem;
+  width: 20%;
+  height: 300px;
+  background-color: transparent;
+  box-shadow: 1px 1px 1px 1px transparent;
+}
+
+.pfp {
+  width: 150px; /* Adjust the width to make the picture bigger */
+  height: 150px; /* Adjust the height to make the picture bigger */
+  object-fit: cover;
+}
+
+.pfpContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 150px;
+  width: 150px;
+  border-radius: 50%; 
+  overflow: hidden; 
+}
+
+/***** Feed *****/
+
+#feedPanel {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#feed {
+  display: flex;
+  flex-direction: column;
+}
+
+#postForm {
+  margin-top: 1rem;
+}
+
+#postForm .text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#postForm button {
+  margin-top: 0.5rem;
+}
+
+#postForm textarea {
+  min-height: 4em;
+  width: 100%;
+}
+
+.post {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  animation: fadein 0.5s;
+}
+
+.post > div {
+  flex-grow: 1;
+}
+
+.postHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.postHeader .author {
+  display: flex;
+  align-items: center;
+}
+
+.postHeader .verified {
+  width: 1em;
+  margin-left: 0.125rem;
+  margin-right: 0.25rem;
+}
+
+.postHeader .time {
+  color: gray;
+}
+
+.post .text {
+  white-space: pre-line;
+}
+
+.tasks {
+  display: flex;
+  align-items: top;
+  justify-content: space-around;
+}
+
+#todo {
+  background-color: lightpink;
+  flex: 1;
+  margin: 10px;
+}
+
+#complete {
+  background-color: lightgreen;
+  flex: 1;
+  margin: 10px;
+}
+
+.tasks {
+  display: flex;
+}
+
+.tasks * {
+  margin-bottom: 1rem;
+}
+
+.columnTitle {
+  margin-top: 0;
+}
+
+/***** Sidebar *****/
+
+#countdownBox {
+  gap: 1rem;
+}
+
+#countdownPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #0e4b9b;
+  color: white;
+  box-shadow: 2px 2px 4px black;
+}
+
+#countdown {
+  font-size: 24px;
+}
+/***** Animations *****/
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
